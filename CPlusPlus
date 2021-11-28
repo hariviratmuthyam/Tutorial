@@ -1,0 +1,102 @@
+Conditional ternary operator:[?]
+x==y ? m : n
+	equall to if (x==y) is true m runs.
+						is false n runs
+------------------------------------------------------------
+
+Bitwsise Operators:
+& AND
+| OR
+^ XOR
+~ NOT
+<< SHL
+>> SHR
+------------------------------------------------------------
+type conversion:
+
+int i;
+float f(375.555);
+i=int(f);
+------------------------------------------------------------
+sizeof()
+type()
+class()
+------------------------------------------------------------
+Basic Input/Output:
+std::cin() is space termianted
+std::cout()
+getline(cin,string_name) ->gives full string even space included.
+cin and cout can be chained to perform multiple statements on one line.
+-------------------------------------------------------------
+StringStream:
+
+<sstream> -> stringstream.
+strings <-> numerical values.
+string text("2084");
+int num;
+stringstream(text)>>num;
+
+create stringstream ss; object
+so ss object can hold strings and int so declared data type can retrieve data as declared.
+
+-------------------------------------------------------------
+Function overloaded vs templates:
+
+Function overloaded means functions with change in parameters data types and their 
+statementsdefined in that funtions are eexecuted if that same data types parameters 
+are given in function instances.
+
+Same way for same statements to eexecute with change in parameters data type
+instead of defining funtion with differ data types and writing same statements
+in body, there is another way of defining templates.
+templates are used for any datatypes as parameters.to execute same body of 
+statements.
+--------------------------------------------------------------
+syntax for templates:
+
+template <class T>
+T sum (T a, T b)
+{
+T result ;
+result = a+b;				------>: defining template
+return result;
+}
+
+k=sum<int>(i,j);			---------->:using in <main> 
+j=sum<double>(f,g);
+
+if multiple data types are in funtions 
+T sum(T a, U b) 			------------>: T and U are 2 types
+sum <int,double>(3, 4.0)
+
+fixed type parameters in template
+T sum (T a, int N)    		------------->:a is dynamic data type N is integer.
+----------------------------------------------------------------
+
+global variables if uninitialised remains 0
+local variables if uninitialised remains 49887576 some garbage value.
+----------------------------------------------------------------
+In C++, it is syntactically correct to exceed the valid range of indices for an array.
+This can create problems, since accessing out-of-range elements do not cause 
+errors on compilation, but can cause errors on runtime.
+
+----------------------------------------------------------------
+accessing array elements if <array> container is included:
+let array<int,6> ar={1,2,3,4,6,6};
+let array<int,4> ar2={1,2,4,5}
+1: ar.at(index)
+2: get<index>ar
+3: ar[index]
+4: ar.front() 	-------->first element
+5: ar.back()	-------->last element
+6: ar.size() 	-------->size of array
+7: ar.max_size  -------->max_elements array can hold
+8: ar.swap(ar2) -------->swaps ar2 elemsnts in ar
+9: ar.empty     -------->true if array is empty
+10:ar.fill(value)------->fills array with value at all indices
+--------------------------------------------------------------
+to print all elements in array:
+for (int elem : ar)
+cout << elem <<'\n';
+--------------------------------------------------------------
+
